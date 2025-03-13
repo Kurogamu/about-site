@@ -1,0 +1,15 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #fdfdfd;
+$faded-color: #b0b0b0;
+$background-color: #202020;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  background-color: $background-color;
+}
+
+.app-root {
+  height: 100vh;
+  height: 100vw;
+}
