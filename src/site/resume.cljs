@@ -25,9 +25,12 @@
      :russian
      {:label "Russian"
       :notes "Conversational, intermediate."}
+     :chinese
+     {:label "Chinese"
+      :notes "Beginner level, vocabulary is rusty."}
      :french
      {:label "French"
-      :notes "Beginner level."}}}
+      :notes "Beginner level, currently learning."}}}
    {:name "Programming Languages"
     :click-note "Click language for details."
     :skill-set
@@ -40,21 +43,51 @@
      :ruby
      {:label "Ruby"
       :notes ">4 years professional experience."}
-     :javascript
-     {:label "JavaScript"
-      :notes "7 years professional experience, in various frameworks."}
-     :clojure
-     {:label "Clojure(-Script)"
-      :notes "1 year building sideprojects."}}}
-   {:name "Programming Languages"
-    :click-note "Click language for details."
-    :skill-set
-    {:django
-     {:label "Django"
-      :notes ">2 years professional experience."}
      :sql
      {:label "SQL"
       :notes ">7 years professional experience in MSSQL, PostgreSQL."}
+     :javascript
+     {:label "JavaScript"
+      :notes "7 years professional experience, in various frameworks."}
+     :rust
+     {:label "Rust"
+      :notes "University project writing X86 kernel."}
+     :c
+     {:label "C"
+      :notes "Various university projects, including an automated GC."}
+     :cplusplus
+     {:label "C++"
+      :notes "University projects including constraint programming and GPU development."}
+     :erlang
+     {:label "Erlang"
+      :notes "University projects focused on concurrency and functional programming."}
+     :haskell
+     {:label "Haskell"
+      :notes "University projects focused on algorithms and datastructures."}
+     :clojure
+     {:label "Clojure(-Script)"
+      :notes "1 year building sideprojects including this site!"}}}
+   {:name "Frameworks and Tools"
+    :click-note "Click language for details."
+    :skill-set
+    {:aws
+     {:label "AWS"
+      :notes "3 years professional experience. Certified cloud developer (associate). Experience with many services including S3, Lambda, Timeseries, Cognito, Route53, ECS, Athena and IAM."}
+     :terraform
+     {:label "Terraform"
+      :notes "1 year professional experience."}
+     :gitlabci
+     {:label "Gitlab CI/CD"
+      :notes "2 years professional experience. Automated unit tests, deployment, etc."}
+     :jenkins
+     {:label "Jenkins"
+      :notes "3 years professional experience. Automated builds and package management."}
+     :django
+     {:label "Django"
+      :notes ">2 years professional experience."}
+     :pytest
+     {:label "Pytest"
+      :notes "2 years professional experience."}
      :rails
      {:label "Rails"
       :notes ">4 years professional experience."}
@@ -63,6 +96,12 @@
       :notes "5 years professional experience."}
      :typescript
      {:label "TypeScript"
+      :notes "5 years professional experience."}
+     :selenium
+     {:label "Selenium"
+      :notes "3 years professional experience."}
+     :jest
+     {:label "Jest"
       :notes "5 years professional experience."}
      :jquery
      {:label "jQuery"
@@ -107,43 +146,72 @@
      "Started delivering production code on 10 year-old code base within days of joining project"
      "Implemented secure encryption to provide FedRAMP compliance"
      "Wrote end-to-end and unit tests on multiple stacks"
-     "Collaborated in Agile teams of 5-10 people across three continents using Git, JIRA and Confluence"]}])
+     "Collaborated in Agile teams of 5-10 people across three continents using Git, JIRA and Confluence"]}
+   {:name "Uppsala University"
+    :time "2 months"
+    :date "July 2016 - August 2016"
+    :title "Assistant Course Director"
+    :fields ["Vector Graphics" "Writing" "Web Design"]
+    :highlights ["Participated in design and implementation of a student site."]}
+   {:name "Uplands Nation"
+    :time "9 months"
+    :date "September 2015 - May 2016"
+    :title "Lead layout and assistant editor"
+    :fields ["Print Design" "Layouting" "Writing" "Interviewing"]
+    :highlights
+    ["Designed a student magazine from scratch."
+      "Coordinated print requirements."
+      "Wrote several articles and edited incoming text."]}
+   {:name "Ayako Sushi"
+    :time "2 years 5 months"
+    :date "February 2012 - June 2014"
+    :title "Waiter"
+    :fields ["Customer Service" "Food Safety and Regulations"]}])
 
 (def data-projects
   [{:name "Personal site"
     :duration "1 week"
     :summary "Website including resume, posts and links. Lets me not depend on other sites to share work experience."
-    :fields "ClojureScript, static hosting"}
+    :fields ["ClojureScript" "static hosting"]}
    {:name "Bord"
     :duration "3 months"
     :summary
     "Replaces spreadsheets: data is typed and passed into map/filter/reduce functions to enable scalable calculations."
-    :fields
-    "ClojureScript, IndexedDB, UX/UI design"}
+    :fields ["ClojureScript" "IndexedDB" "UX/UI design"]}
    {:name "Antecknat"
     :duration "1 month"
     :summary
     "Note-taking web-app deployed in AWS"
-    :fields
-    "ClojureScript, DNS, TLS, IaC, AWS (Route53, S3, Cognito, Organizations, CloudFormation, CloudDeploy, CloudCommit)"}
+    :fields ["ClojureScript" "DNS" "TLS" "IaC" "AWS (Route53" "S3" "Cognito" "Organizations" "CloudFormation" "CloudDeploy" "CloudCommit)"]}
    {:name "Kloss"
     :duration "3 months"
     :summary
     "Student project making a rust-based microkernel for X86 hardware"
-    :fields
-    "CPU architecture, low-level programming, Rust, Assembly, kernel development"}])
+    :fields ["CPU architecture" "low-level programming" "Rust" "Assembly" "kernel development"]}])
 
 (def data-education
   [{:name "Certified Developer - Associate"
     :duration "Jan 2024 - February 2024"
     :location "AWS"
     :summary "Validation of technical proficiency in developing cloud-based applications in AWS"
-    :fields "Cloud architecture (serverless, microservices, API design), AWS (Route53, CloudDeploy, CloudFormation, CloudWatch, ECS, EKS, EC2, DynamoDB, Lambda, Step Functions, SAM, SQS, SNS, EventBridge, S3), databases, security, networks"}
+    :fields ["Cloud architecture (serverless" "microservices" "API design)" "AWS (Route53" "CloudDeploy" "CloudFormation" "CloudWatch" "ECS" "EKS" "EC2" "DynamoDB" "Lambda" "Step Functions" "SAM" "SQS" "SNS" "EventBridge" "S3)" "databases" "security" "networks"]}
    {:name "Computer Science Bsc."
     :duration "August 2014 - June 2017"
-    :location "Uppsala University"
+    :location "Uppsala University (Sweden)"
     :summary "Elected courses in mathematics and combinatorial optimization"
-    :fields "Algorithms, datastructures, compilers, security, databases, low-level parallelism, semantics, networks, combinatorial optimization, linear programming, multi-variable calculus, linear algebra, statistics, probability, formal logic"}])
+    :fields ["Algorithms" "datastructures" "compilers" "security" "databases" "low-level parallelism" "semantics" "networks" "combinatorial optimization" "linear programming" "multi-variable calculus" "linear algebra" "statistics" "probability" "formal logic"]}
+   {:name "Russian"
+    :duration "August 2013 - June 2014"
+    :location "Uppsala University (Sweden)"
+    :summary "Language and culture studies"}
+   {:name "Chinese"
+    :duration "August 2012 - June 2013"
+    :location "Uppsala University (Sweden)"
+    :summary "Language and culture studies"}
+   {:name "Japanese"
+    :duration "October 2010 - August 2011"
+    :location "Nihongo Center (Japan)"
+    :summary "Language and culture studies"}])
 
 ;; -------------------------
 ;; View
@@ -190,16 +258,16 @@
         :description (:click-note entry)}])]])
 
 (defn employment [entry]
-  (let [collapsed (r/atom true)]
+  (let [collapsed (r/atom (< 4 (count (:highlights entry))))]
     [:div
      {:key (:name entry)
       :class "card"}
      [:div
       {:class "card-title"}
       [:h3 (:name entry)]
-     [:div
-      {:class "card-subtitle"}
-      [:div {:class "job-title"} (:title entry)]]]
+      [:div
+       {:class "card-subtitle"}
+       [:div {:class "job-title"} (:title entry)]]]
      [:div
       {:class "card-content"}
       [collapsible-wrapper
@@ -209,25 +277,28 @@
          :class "detailed-list-section job-duration"}
         [:span {:class "time"} (:time entry)]
         [:span {:class "date"} (:date entry)]]
-       [:div
-        {:key (join [entry "stack"])
-         :class "detailed-list-section"}
-        [:span {:class "label"} "Stack"]
-        [:span {:class "content"} (join ", " (:stack entry))]]
-       [:div
-        {:key (join [entry "stack"])
-         :class "detailed-list-section"}
-        [:span {:class "label"} "Fields"]
-        [:span {:class "content"} (join ", " (:fields entry))]]
-       [:div
-        {:key (join [entry "stack"])
-         :class "detailed-list-section"}
-        [:span {:class "label"} "Responsibilities"]
-        [:span
-         {:class "content"}
-         [:ul
-          (for [[index highlight] (map-indexed vector (:highlights entry))]
-            [:li {:key (join [entry index])} highlight])]]]]]]))
+       (if-not (clojure.string/blank? (:stack entry))
+         [:div
+          {:key (join [entry "stack"])
+           :class "detailed-list-section"}
+          [:span {:class "label"} "Stack"]
+          [:span {:class "content"} (join ", " (:stack entry))]])
+       (if (count (:fields entry))
+         [:div
+          {:key (join [entry "fields"])
+           :class "detailed-list-section"}
+          [:span {:class "label"} "Fields"]
+          [:span {:class "content"} (join ", " (:fields entry))]])
+       (if-not (clojure.string/blank?  (:highlights entry))
+         [:div
+          {:key (join [entry "stack"])
+           :class "detailed-list-section"}
+          [:span {:class "label"} "Responsibilities"]
+          [:span
+           {:class "content"}
+           [:ul
+            (for [[index highlight] (map-indexed vector (:highlights entry))]
+              [:li {:key (join [entry index])} highlight])]]])]]]))
 
 (defn project [entry]
   [:div
@@ -247,10 +318,11 @@
      {:class "detailed-list-section"}
      [:span {:class "label"} "Duration"]
      [:span {:class "content"} (:duration entry)]]
-    [:div
-     {:class "detailed-list-section"}
-     [:span {:class "label"} "Fields"]
-     [:span {:class "content"} (:fields entry)]]]])
+    (if-not (clojure.string/blank? (:fields entry))
+      [:div
+       {:class "detailed-list-section"}
+       [:span {:class "label"} "Fields"]
+       [:span {:class "content"} (join ", " (:fields entry))]])]])
 
 (defn resume []
   [:div
