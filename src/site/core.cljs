@@ -2,6 +2,7 @@
   (:require
     [site.state :refer [app-state emit tabs]]
     [site.util :refer [kebab-wrap]]
+    [site.graphic :refer [graphic]]
     [site.resume :refer [resume]]
     [site.about :refer [about]]
     [site.notes :refer [notes]]
@@ -36,6 +37,7 @@
   [:div {:class "app-root"}
    [:div
     {:class "top-section"}
+    [graphic]
     [title]
     [tab-menu]]
    (case (:tab @app-state)
