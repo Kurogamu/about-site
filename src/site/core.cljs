@@ -14,16 +14,13 @@
 ;; View
 
 (defn title []
-  [:div
-   {:class "page-title"}
-   [:h1 "daniel beretta"]])
+  [:div.page-title [:h1 "daniel beretta"]])
 
 (defn tab-menu []
   (let [button-class #(kebab-wrap
                         "tab-menu-button"
                         (if (= % (:tab @app-state)) "selected"))]
-    [:div
-     {:class "tab-menu"}
+    [:div.tab-menu
      (doall
        (for [[tab-key tab-label] tabs]
        [:button
@@ -31,6 +28,13 @@
          :class (button-class tab-key)
          :on-click #(emit [:select-tab tab-key])}
         tab-label]))]))
+
+(defn footer []
+  [:div.footer
+   [:p
+    "This site is built by me with ClojureScript and hosted on DigitalOcean. "
+    [:a {:href "https://github.com/Kurogamu/about-site"} "Here's the page source!"]]
+   [:p "The bin-tree at page top is randomly generated, click on it to get a new one."]])
 
 
 (defn app-root []
@@ -44,7 +48,8 @@
      :resume [resume]
      :about [about]
      :notes [notes]
-     [:div {:class "empty"}])])
+     [:div {:class "empty"}])
+   [footer]])
 
 ;; -------------------------
 ;; Handlers

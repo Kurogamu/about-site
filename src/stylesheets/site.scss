@@ -2,6 +2,7 @@ $font-stack: Helvetica, sans-serif;
 $primary-color: #fdfdfd;
 $faded-color: #b0b0b0;
 $backdrop-color: #0d2124;
+$title-background-color: #103030;
 $background-color: #001010;
 $background-color-highlight: #404040a0;
 $transparent-backdrop: linear-gradient(#102525a0, #102525c0);
@@ -12,13 +13,14 @@ $size-xxl: 423.6%;
 $size-xl: 261.8%;
 $size-l: 161.8%;
 $size-m: 100%;
-$size-s: 76.4%;
-$size-xs: 61.8%;
+$size-s: 85.4%;
+$size-xs: 76.4%;
 
 body {
   font: $size-m $font-stack;
   color: $primary-color;
   background-color: $backdrop-color;
+  margin: 0;
 
   a {
     &:link {
@@ -71,7 +73,7 @@ body {
 
 .app-root {
   height: 100vh;
-  height: 100vw;
+  width: 100vw;
 
   display: flex;
   flex-direction: column;
@@ -86,6 +88,7 @@ body {
   align-items: center;
   position: relative;
   .backdrop {
+    background-color: $title-background-color;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -101,6 +104,7 @@ body {
   padding: 1rem;
   margin: 2rem 0;
   border-bottom: .1rem solid $primary-color;
+  pointer-events: none;
 }
 
 .tab-menu {
@@ -135,13 +139,23 @@ body {
 }
 
 .main-section {
+  flex: 1;
   padding-top: 2rem;
   width: 97vw;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
   grid-template-rows: auto;
+  align-content: start;
   align-items: start;
   grid-gap: 2rem;
+
+  animation: fade-in .5s;
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+  }
 }
 
 .main-subsection {
@@ -284,4 +298,13 @@ body {
   &:hover::before {
     background-color: $background-color-transparent;
   }
+}
+
+.footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  font-size: $size-s;
+  text-align: center;
+  align-self: stretch;
+  background: $background-color;
 }
