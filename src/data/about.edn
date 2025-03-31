@@ -1,0 +1,39 @@
+{:recap
+ {:name "Things done"
+  :type :text-block
+  :data
+  "I have lived in Sweden, Finland, Japan and Canada; studied music, 3D sculpting, a few languages and computer science; worked as a bartender, waiter and software developer; layouted a yearbook and a student magazine; played in a handful of metal/punk bands; written a bunch of songs; knitted a couple of sweaters and many small things; designed and 3D-printed child-proofing attachments for furniture; written a few recipes; assembled and programmed half a dozen ergonomic keyboards; collected LEGO sets; and become a father of two."}
+
+ :computer
+ {:name "Computers"
+  :type :text-block
+  :data
+  "While I've used keyboards since I learned to read, my passion for languages, math and technology really came together as I began studying computer science. I was particularly inspired by algorithms and datastructures, which led me into combinatorial optimization. My thesis brought me into work in fintech and later in the energy industry. As a full-stack developer I have learned to architect, design and write software while aware of scalability and cost."}
+
+ :interests
+ {:name "Interests"
+  :type :text-block
+  :data
+   "I have an unsustainable amount of hobbies, but in short: I like obscure music, technology, table-top role-playing games, knitting, horror fiction and custom-built keyboards."}
+
+
+ :links
+ {:name "Contact"
+  :type :list
+  :data
+  [{:label "E-mail"
+    :type "link"
+    :link-target "mailto:daniel@beretta.nu"
+    :link-label "daniel@beretta.nu"}
+   {:label "E-mail (alt)"
+    :type "link"
+    :link-target "mailto:ahlbom.daniel@gmail.com"
+    :link-label "ahlbom.daniel@gmail.com"}
+   {:label "GitHub"
+    :type "link"
+    :link-target "https://github.com/kurogamu"
+    :link-label "@kurogamu"}
+   {:label "LinkedIn"
+    :type "link"
+    :link-target "https://www.linkedin.com/in/daniel-beretta/"
+    :link-label "@daniel-beretta"} ]}}

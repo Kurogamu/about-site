@@ -32,10 +32,9 @@
 (defn footer []
   [:div.footer
    [:p
-    "This site is built by me with ClojureScript and hosted on DigitalOcean. "
+    "This site is built by me with ClojureScript and hosted on DigitalOcean. Network-level data might get collected. "
     [:a {:href "https://github.com/Kurogamu/about-site"} "Here's the page source!"]]
    [:p "The bin-tree at page top is randomly generated, click on it to get a new one."]])
-
 
 (defn app-root []
   [:div {:class "app-root"}
