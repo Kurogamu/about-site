@@ -54,6 +54,18 @@
      :cplusplus
      {:label "C++"
       :notes "University projects including constraint programming and GPU development."}
+     :minizinc
+     {:label "MiniZinc"
+      :notes "University projects and personal project (wedding seat arrangement)."}
+     :ampl
+     {:label "AMPL"
+      :notes "Bachelor Thesis."}
+     :latex
+     {:label "LaTeX"
+      :notes "Various projects since 2008."}
+     :shell
+     {:label "Shell (incl. bash)"
+      :notes "Various projects since 2008."}
      :erlang
      {:label "Erlang"
       :notes "University projects focused on concurrency and functional programming."}
@@ -63,9 +75,9 @@
      :clojure
      {:label "Clojure(-Script)"
       :notes "1 year building sideprojects including this site!"}}}
-   {:name "Frameworks and Tools"
+   {:name "Frameworks, Tools and Infrastructure"
     :type :click-list
-    :click-note "Click language for details."
+    :click-note "Click on a tool for details."
     :skill-set
     {:aws
      {:label "AWS"
@@ -88,12 +100,18 @@
      :rails
      {:label "Rails"
       :notes ">4 years professional experience."}
+     :elasticsearch
+     {:label "Elasticsearch"
+      :notes "2 years professional experience."}
      :react
      {:label "React"
       :notes "5 years professional experience."}
      :typescript
      {:label "TypeScript"
       :notes "5 years professional experience."}
+     :webpack
+     {:label "Webpack"
+      :notes "6 years professional experience."}
      :selenium
      {:label "Selenium"
       :notes "3 years professional experience."}
@@ -102,7 +120,59 @@
       :notes "5 years professional experience."}
      :jquery
      {:label "jQuery"
-      :notes "3 years professional experience."}}}]}
+      :notes "3 years professional experience."}
+     :maven
+     {:label "Maven"
+      :notes "Replaced manual package management in large commercial Java application."}
+     :nodejs
+     {:label "NPM"
+      :notes ">7 years professional experience."}
+     :pip
+     {:label "PIP"
+      :notes ">2 years professional experience."}
+     :keycloak
+     {:label "Keycloak"
+      :notes "6 months professional experience."}
+     :docker
+     {:label "Docker"
+      :notes ">6 years professional experience. Implemented legacy Java deployment in Docker."}
+     :k8s
+     {:label "Kubernetes"
+      :notes ">2 years professional experience."}
+     :linux
+     {:label "Linux"
+      :notes "Compiling kernels since 2008."}}}
+   {:name "Skills and Fields"
+    :type :click-list
+    :click-note "Click on a skill for details."
+    :skill-set
+    {:architecture
+     {:label "Architecture"
+      :notes "2 years professional experience."}
+     :microservices
+     {:label "Microservices"
+      :notes "3 years professional experience."}
+     :etl
+     {:label "ETL"
+      :notes "2 years professional experience."}
+     :optimization
+     {:label "Mathematical Optimization"
+      :notes "1 year academic studies and projects."}
+     :security
+     {:label "Cybersecurity"
+      :notes "Academic and professional experience testing software security."}
+     :cloud
+     {:label "Cloud"
+      :notes ">5 years professional experience with Azure/AWS."}
+     :agile
+     {:label "Agile"
+      :notes ">6 years professional experience."}
+     :mentoring
+     {:label "Mentoring"
+      :notes "Wrote a student site. Mentored three junior colleagues transitioning to mid-level."}
+     :web
+     {:label "Web development"
+      :notes ">7 years professional experience and multiple personal projects."}}}]}
 
  :employments
  {:name "Work"
