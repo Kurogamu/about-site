@@ -179,12 +179,16 @@
     :type :project
     :duration "1 week"
     :summary "Website including resume, posts and links. Lets me not depend on other sites to share work experience."
+    :link-target "https://github.com/Kurogamu/about-site"
+    :link-label "GitHub Repository"
     :fields ["ClojureScript" "static hosting"]}
    {:name "Bord"
     :type :project
     :duration "3 months"
     :summary
     "Replaces spreadsheets: data is typed and passed into map/filter/reduce functions to enable scalable calculations."
+    :link-target "https://github.com/Kurogamu/bord"
+    :link-label "GitHub Repository"
     :fields ["ClojureScript" "IndexedDB" "UX/UI design"]}
    {:name "Antecknat"
     :type :project
@@ -192,9 +196,21 @@
     :summary
     "Note-taking web-app deployed in AWS"
     :fields ["ClojureScript" "DNS" "TLS" "IaC" "AWS (Route53" "S3" "Cognito" "Organizations" "CloudFormation" "CloudDeploy" "CloudCommit)"]}
+   {:name "Quadratic Programming Models in Strategic Sourcing Optimization"
+    :type :project
+    :duration "3 months"
+    :link-target
+    "http://uu.diva-portal.org/smash/record.jsf?pid=diva2%3A1159097&dswid=-4547"
+    :link-label
+    "Publication link"
+    :summary
+    "Bachelor thesis investigating different models using modern LP and QP solvers. Written in my maiden name."
+    :fields ["AMPL" "Latex" "Linear Programming" "Quadratic Programming" "Sourcing Optimization"]}
    {:name "Kloss"
     :type :project
     :duration "3 months"
+    :link-target "https://github.com/kloss-os"
+    :link-label "GitHub Repository"
     :summary
     "Student project making a rust-based microkernel for X86 hardware"
     :fields ["CPU architecture" "low-level programming" "Rust" "Assembly" "kernel development"]}]}

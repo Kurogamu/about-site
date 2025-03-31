@@ -17,10 +17,8 @@
 ;; View
 
 (defn wrapped-list [{:keys [entries selected description]}]
-  [:div
-   {:class "wrapped-list"}
-   [:div
-    {:class "wrapped-list-entries"}
+  [:div.wrapped-list
+   [:div.wrapped-list-entries
     (doall
       (for [[entry-key entry] entries]
         [:button
@@ -31,10 +29,9 @@
           :on-click #(reset! selected entry-key)}
          (:label entry)]))]
    (if (some? @selected)
-     [:div
-      {:class "wrapped-list-note"}
-      [:span {:class "label"} (get-in entries [@selected :label])]
-      [:span {:class "note"} (get-in entries [@selected :notes])]]
+     [:div.wrapped-list-note
+      [:span.label (get-in entries [@selected :label])]
+      [:span.note (get-in entries [@selected :notes])]]
      [:div
       {:class "wrapped-list-description"} description])])
 
@@ -48,9 +45,8 @@
   [:div
    {:key (:name entry)
     :class "card"}
-   [:div {:class "card-title"} [:h3 (:name entry)]]
-   [:div
-    {:class "card-content"}
+   [:div.card-title [:h3 (:name entry)]]
+   [:div.card-content
     (let [selected (r/atom nil)]
       [wrapped-list
        {:entries (:skill-set entry)
@@ -62,21 +58,18 @@
     [:div
      {:key (:name entry)
       :class "card"}
-     [:div
-      {:class "card-title"}
+     [:div.card-title
       [:h3 (:name entry)]
-      [:div
-       {:class "card-subtitle"}
-       [:div {:class "job-title"} (:title entry)]]]
-     [:div
-      {:class "card-content"}
+      [:div.card-subtitle
+       [:div.job-title (:title entry)]]]
+     [:div.card-content
       [collapsible-wrapper
        {:collapsed collapsed}
        [:div
         {:key (join [entry "dur"])
          :class "detailed-list-section job-duration"}
-        [:span {:class "time"} (:time entry)]
-        [:span {:class "date"} (:date entry)]]
+        [:span.time (:time entry)]
+        [:span.date (:date entry)]]
        (if-not (clojure.string/blank? (:stack entry))
          [:div
           {:key (join [entry "stack"])
@@ -87,15 +80,14 @@
          [:div
           {:key (join [entry "fields"])
            :class "detailed-list-section"}
-          [:span {:class "label"} "Fields"]
-          [:span {:class "content"} (join ", " (:fields entry))]])
+          [:span.label "Fields"]
+          [:span.content (join ", " (:fields entry))]])
        (if-not (clojure.string/blank?  (:highlights entry))
          [:div
           {:key (join [entry "stack"])
            :class "detailed-list-section"}
-          [:span {:class "label"} "Responsibilities"]
-          [:span
-           {:class "content"}
+          [:span.label "Responsibilities"]
+          [:span.content
            [:ul
             (for [[index highlight] (map-indexed vector (:highlights entry))]
               [:li {:key (join [entry index])} highlight])]]])]]]))
@@ -104,25 +96,26 @@
   [:div
    {:key (:name entry)
     :class "card"}
-   [:div
-    {:class "card-title"}
+   [:div.card-title
     [:h3 (:name entry)]
     (if (contains? entry :location)
-      [:div {:class "card-subtitle"} (:location entry)])]
-   [:div
-    {:class "card-content"}
-    [:div
-     {:class "detailed-list-section"}
-     (:summary entry)]
-    [:div
-     {:class "detailed-list-section"}
-     [:span {:class "label"} "Duration"]
-     [:span {:class "content"} (:duration entry)]]
+      [:div.card-subtitle (:location entry)])]
+   [:div.card-content
+    [:div.detailed-list-section (:summary entry)]
+    [:div.detailed-list-section
+     [:span.label "Duration"]
+     [:span.content (:duration entry)]]
+    (if-not (clojure.string/blank? (:link-target entry))
+     [:div.detailed-list-section
+      [:span.label "Link"]
+      [:span.link
+       [:a
+        {:href (:link-target entry)}
+        (:link-label entry)]]])
     (if-not (clojure.string/blank? (:fields entry))
-      [:div
-       {:class "detailed-list-section"}
-       [:span {:class "label"} "Fields"]
-       [:span {:class "content"} (join ", " (:fields entry))]])]])
+      [:div.detailed-list-section
+       [:span.label "Fields"]
+       [:span.content (join ", " (:fields entry))]])]])
 
 (defn card [entry]
   (case (:type entry)
