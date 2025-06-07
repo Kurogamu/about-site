@@ -6,16 +6,7 @@ It's a fairly usable starting point for a bare-bones cljs + reagent + sass stati
 
 ## Development
 
-Requires JDK for ClojureScript and npm for building.
-I use the following NixOS packages
-
-```
-pkgs.nodejs_22
-pkgs.jdk21_headless
-pkgs.clojure
-pkgs.clojure-lsp
-pkgs.leiningen
-```
+Requires JDK for ClojureScript and npm for building. Refer to [nix config](shell.nix) for packages.
 
 After running `npm install`, run auto-reloading cljs and sass services with the following
 
